@@ -17,7 +17,6 @@ install:
   - npm install respec-validator
 
 script:
-  - curl -H "Authorization: token $GH_TOKEN" https://api.github.com/rate_limit -I
   - npx respec-validator --no-links --gh-token $GH_TOKEN index.html
 
 cache:
