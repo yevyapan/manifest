@@ -19,7 +19,7 @@ install:
 script:
   - "curl -H 'Authorization: token $GH_TOKEN' https://api.github.com/rate_limit -I"
   - npx respec-validator --debug --no-links --gh-token $GH_TOKEN index.html
-  - "curl -H 'Authorization: token $GH_TOKEN' https://api.github.com/rate_limit -I"
+  - curl -H "Authorization: token $GH_TOKEN" "https://api.github.com/rate_limit" -I
 
 cache:
   directories:
